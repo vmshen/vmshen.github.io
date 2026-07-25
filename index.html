@@ -26,9 +26,20 @@
     <h2>home</h2>
     <p>Hi, I'm Alex. I build small things on the internet and write down what I'm learning along the way.</p>
     <p>This site is a quiet corner — a place for projects I'm proud of, notes on what I'm doing right now, and a little about who I am.</p>
-    <blockquote>Made it, didn't I.</blockquote>
+    <blockquote id="quote">Made it, didn't I.</blockquote>
     <p>Look around: <a href="projects.html">see what I've built</a>, or check <a href="now.html">what I'm up to today</a>.</p>
   </main>
 </div>
+<script>
+  var quotes = [
+    "Made it, didn't I.",
+    "The unexamined life is not worth living. — Socrates",
+    "Simplicity is the ultimate sophistication. — Leonardo da Vinci",
+    "Do the work. Then be quiet about it.",
+    "Slow is smooth, smooth is fast."
+  ];
+  document.getElementById("quote").textContent =
+    quotes[Math.floor(Math.random() * quotes.length)];
+</script>
 </body>
 </html>
