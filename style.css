@@ -1,11 +1,10 @@
 :root {
-  --bg: #f6f3ec;
-  --text: #201f1b;
-  --muted: #8a8578;
-  --accent: #4b5d3b;
-  --border: #e3ddcd;
-  --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
-  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --bg: #fbfaf7;
+  --text: #2f2d2a;
+  --muted: #8a8378;
+  --accent: #a1613f;
+  --border: #e6e1d5;
+  --font-serif: 'Crimson Pro', Georgia, 'Iowan Old Style', 'Times New Roman', serif;
 }
 
 * { box-sizing: border-box; }
@@ -14,69 +13,75 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--sans);
-  font-size: 17px;
-  line-height: 1.65;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-transform: lowercase;
+  display: flex;
+  min-height: 100vh;
 }
 
-.layout { display: flex; min-height: 100vh; max-width: 980px; margin: 0 auto; }
+.layout { display: flex; min-height: 100vh; max-width: 980px; margin: 0 auto; width: 100%; }
 
-.sidebar {
-  width: 220px;
+.site-nav {
   flex-shrink: 0;
-  padding: 56px 24px;
+  width: 140px;
+  padding: 2.5rem 0 2.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-right: 1px solid var(--border);
 }
 
-.sidebar h1 { font-family: var(--serif); font-size: 20px; margin: 0 0 32px; font-weight: normal; }
-.sidebar h1 a { color: var(--text); text-decoration: none; }
-.tagline { font-size: 13px; color: var(--muted); margin: 0; }
+.site-nav .brand { font-size: 1rem; margin: 0 0 2rem; }
+.site-nav .brand a { color: var(--text); text-decoration: none; }
 
+.site-nav nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; }
+.site-nav nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; }
+.site-nav nav a:hover, .site-nav nav a.active { color: var(--accent); }
+.site-nav nav a.active::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
 
-nav ul { list-style: none; padding: 0; margin: 0; }
-nav li { margin-bottom: 10px; }
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 15px;
+.tagline { font-size: 0.85rem; color: var(--muted); margin: 0; }
+
+.page {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  padding: 3.5rem 1.5rem;
 }
-nav a:hover { color: var(--text); }
-nav a.active { color: var(--text); }
-nav a.active::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.page > * { width: 100%; max-width: 480px; }
 
-main { flex: 1; padding: 56px 40px; max-width: 620px; }
-main h2 { font-family: var(--serif); font-size: 28px; margin: 0 0 24px; font-weight: normal; }
-main p { margin: 0 0 18px; }
-main a { color: var(--accent); }
-main a:hover { text-decoration: none; }
+.page h2 { font-weight: 400; font-size: 1.4rem; margin: 0 0 1.5rem; }
+.page p { margin: 0 0 1.1rem; }
+.page a { color: var(--accent); }
+.page a:hover { text-decoration: none; }
 
-blockquote {
-  margin: 32px 0;
-  padding-left: 18px;
-  border-left: 2px solid var(--accent);
-  color: var(--muted);
+.hero-quote {
+  text-align: center;
+  font-size: 1rem;
   font-style: italic;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 2.5rem;
 }
+
+footer { text-align: center; padding: 2.5rem 0 0; color: var(--muted); font-size: 0.85rem; }
 
 @media (max-width: 640px) {
   .layout { flex-direction: column; }
-  .sidebar {
+  .site-nav {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: auto;
     border-right: none;
     border-bottom: 1px solid var(--border);
-    padding: 24px;
+    padding: 1.5rem;
   }
-  nav ul { display: flex; gap: 16px; flex-wrap: wrap; }
+  .site-nav nav ul { flex-direction: row; flex-wrap: wrap; }
   .tagline { display: none; }
-  main { padding: 32px 24px; max-width: 100%; }
+  .page { padding: 2rem 1.25rem; }
 }
 
-a:focus-visible, nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+a:focus-visible, .site-nav nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
