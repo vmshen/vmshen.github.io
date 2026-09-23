@@ -1,68 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>your name</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<title>vera shen</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="wrapper">
 
-<header class="site-nav">
-  <div class="brand"><span>your name</span></div>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">home</a></li>
-      <li><a href="about.html">about</a></li>
-      <li><a href="now.html">now</a></li>
-      <li><a href="projects.html">projects</a></li>
-    </ul>
-  </nav>
-</header>
+  <aside class="sidebar">
+    <div class="name">vera shen</div>
+    <nav>
+      <a href="index.html" class="active">me</a>
+      <a href="tales.html">tales</a>
+      <a href="marvels.html">marvels</a>
+      <a href="humanity.html">humanity</a>
+    </nav>
+  </aside>
 
-<div class="page">
+  <main class="main">
+    <div class="content">
 
-  <div class="cover">
-    <!-- upload a photo and rename it cover.jpg, or tell me the filename and I'll match it -->
-    <img src="cover.jpg" alt="">
-  </div>
+      <div class="cover">
+        <!-- replace this div's contents with: <img src="cover.jpg" alt=""> -->
+        cover image
+      </div>
 
-  <div class="hero-quote" id="hero-quote"></div>
+      <p class="quote" id="quote"></p>
 
-  <main id="thoughts"></main>
+      <div class="thoughts">
+        <div class="thought">
+          <h2>on starting again</h2>
+          <p>every so often it helps to clear the desk and begin from a blank page, not because the old one was wrong, but because a new one asks better questions.</p>
+        </div>
+        <div class="thought">
+          <h2>small rituals</h2>
+          <p>the coffee, the walk, the ten minutes of nothing before the day starts properly. none of it feels important until it's missing.</p>
+        </div>
+        <div class="thought">
+          <h2>on noticing</h2>
+          <p>most of what i want to remember about a place isn't the landmark, it's the light at a particular hour, or a stranger's sentence overheard in passing.</p>
+        </div>
+      </div>
 
-  <footer>updated whenever the mood strikes, not on a schedule</footer>
+    </div>
+  </main>
 
 </div>
 
+<footer>updated whenever the mood strikes, not on a schedule</footer>
+
 <script>
   const quotes = [
-    "The world is a book, and those who do not travel read only one page.",
-    "Tell me, what is it you plan to do with your one wild and precious life?",
-    "We travel, some of us forever, to seek other states, other lives, other souls.",
-    "A person who speaks four languages is quadrilingual. A person who speaks one language is American."
+    "the days are long but the years are short.",
+    "not all who wander are lost.",
+    "you cannot stay in your corner of the forest waiting for others to come to you.",
+    "what we think, we become.",
+    "in the middle of difficulty lies opportunity.",
+    "the unexamined life is not worth living."
   ];
-  document.getElementById("hero-quote").textContent =
+  document.getElementById('quote').textContent =
     quotes[Math.floor(Math.random() * quotes.length)];
-
-  const thoughts = [
-    { title: "on being everywhere at once", text: "Some days my head is six countries and four languages at the same time and I genuinely don't know which one I'm thinking in." },
-    { title: "a stranger's story", text: "Met a man on a night train who'd crossed three borders on foot as a kid. Told it like it was nothing. I haven't stopped thinking about it." },
-    { title: "small note", text: "Started a new basil plant. Third attempt. Praying this one survives me." }
-  ];
-
-  const container = document.getElementById("thoughts");
-  thoughts.forEach(t => {
-    const block = document.createElement("div");
-    block.className = "thought";
-    const h = document.createElement("h3"); h.textContent = t.title;
-    const p = document.createElement("p"); p.textContent = t.text;
-    block.appendChild(h); block.appendChild(p);
-    container.appendChild(block);
-  });
 </script>
-
 </body>
 </html>
