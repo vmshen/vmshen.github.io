@@ -54,7 +54,6 @@ header.site-nav {
 }
 .site-nav nav a:hover, .site-nav nav a.active { color: var(--accent); }
 
-/* front cover image, homepage only */
 .cover { margin: 0 0 2.5rem; }
 .cover img {
   width: 100%;
@@ -71,6 +70,9 @@ header.site-nav {
 .thought { margin-bottom: 2.6rem; }
 .thought h3 { margin: 0 0 0.3rem; font-size: 0.92rem; font-weight: 400; }
 .thought p { margin: 0; font-size: 0.92rem; line-height: 1.6; }
+
+.page-body p { line-height: 1.7; margin-bottom: 1.4rem; }
+
 footer {
   text-align: center;
   padding: 2.5rem 0;
