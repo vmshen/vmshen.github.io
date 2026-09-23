@@ -41,7 +41,8 @@ header.site-nav {
   gap: 0.9rem;
   padding: 2rem 0 2.5rem 1rem;
 }
-.site-nav .brand a { color: var(--text); text-decoration: none; font-size: 0.92rem; }
+.site-nav .brand a { color: var(--text); text-decoration: none; }
+.site-nav .brand span { font-size: 0.92rem; }
 .site-nav nav ul { list-style: none; display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem; margin: 0; padding: 0; }
 .site-nav nav a {
   color: var(--text);
@@ -62,8 +63,6 @@ header.site-nav {
 .hero-quote {
   text-align: center;
   font-size: 0.92rem;
-  font-style: italic;
-  color: var(--muted);
   line-height: 1.7;
   margin: 0 0 3.5rem;
 }
