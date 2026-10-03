@@ -127,6 +127,26 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.entry-list a:hover {
+  color: var(--accent);
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
 footer {
   margin-top: 4rem;
   text-align: center;
