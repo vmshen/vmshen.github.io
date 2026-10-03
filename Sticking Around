@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>entry title</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <aside class="sidebar">
+    <div class="name">v i n c e n t</div>
+    <nav>
+      <a href="../index.html">me</a>
+      <a href="../tales.html" class="active">tales</a>
+      <a href="../marvels.html">marvels</a>
+      <a href="../humanity.html">humanity</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="content">
+      <a href="../tales.html" class="back-link">← tales</a>
+      <h1 class="page-title">entry title goes here</h1>
+      <p>first paragraph of the entry goes here. write as much or as little as you want.</p>
+      <p>another paragraph if you need it.</p>
+    </div>
+  </main>
+
+</div>
+
+<footer>you are the greatest</footer>
+</body>
+</html>
